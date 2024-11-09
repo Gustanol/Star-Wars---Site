@@ -1,0 +1,783 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    scroll-snap-type: y mandatory;     
+    overflow-y: scroll;
+}
+
+html, body {
+    height: auto;
+    max-width: 100vw;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.hr1 {
+    width: 100%;
+    height: 0.3vh;
+    background-color: white;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Páginas de conteúdo */
+.div-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    z-index: 10;
+    overflow-y: scroll;
+}
+
+.body-content:before {
+    content: '';
+    position: fixed;
+    background: no-repeat center/cover;
+    width: 100%;
+    height: 100%;
+}
+
+.body-content:after {
+    content: '';
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.65);
+    width: 100%;
+    height: 100%;
+}
+
+.grid-div-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    'header header header'
+    'header header header'
+    'content1 content2 content3';
+    width: 40vw;
+    height: 70vh;
+    position: absolute;
+    border: 4px solid red;
+    margin-left: 2vw;
+}
+
+.header-grid-div-content {
+    grid-area: header;
+    background: no-repeat center/cover;
+    border-bottom: 0.5vh solid red;    
+}
+
+.container-grid-div-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    font-family: Arial;
+    font-size: auto;
+    border: 4px solid blue;
+}
+
+.container-grid-div-content a {
+    text-decoration: underline;
+}
+
+.content1-grid-div-content {
+    grid-area: content1;
+}
+
+.content2-grid-div-content {
+    grid-area: content2;
+}
+
+.content3-grid-div-content {
+    grid-area: content3;
+}
+/* Páginas de conteúdo */
+
+/* Transições e animações */
+.fade-in {
+    opacity: 0;
+    transform: translateY(1.852vh);
+    transition: opacity 2.5s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1; 
+    transform: translateY(0); 
+}
+/* Transições e animações */
+
+/* Barra de navegação superior */ 
+.swlogo {
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    z-index: 5;
+    font-size: 2vw;
+    flex-wrap: wrap;
+    color: white;
+    margin-right: 0.8vw;
+}
+
+.container-logo {
+    width: auto;
+    height: auto;
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    left: 2vw;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.swlogo p {
+    cursor: pointer;
+    flex-shrink: 1;
+    flex-grow: 0;
+}
+
+.hr-bck {
+    position: absolute;
+    height: auto;
+    width: auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;    
+    right: 2.5vw;
+    top: 0;
+    padding-top: 1vh; 
+    z-index: 5;
+    font-size: 2vw;
+}
+
+.sw-text {
+    flex-shrink: 1;
+    cursor: pointer;    
+    color: #FFFFFF;
+    text-shadow: 0.1vw 0.1vh 0.3vw #000000;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.sw-text:after {
+    content: " •\00a0";
+}
+
+#last:after {
+    content: "";
+}
+
+#search {
+    width: 3vw;
+    height: auto;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#close-btn {
+    width: 3vw;
+    height: auto;
+    top: 2vh;
+    position: absolute;
+    left: 5vw;
+    cursor: pointer;
+}
+
+#search-input {
+    padding: 2%;
+    background-color: #C1C1C1;
+    border: 1vw solid #3E3E3E;
+    width: 50vw;
+    height: 10vh;
+    font-size: 2vw;
+    z-index: 10;
+    cursor: text;
+}
+
+#search-menu {
+    display: none;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 10;
+    top: 0;
+}
+
+#suggestions {
+    width: 50vw;
+    height: 30vh;
+    top: 22vh;
+    color: white;
+    overflow-y: scroll;
+}
+
+#suggestions div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; 
+    padding: 2vh;
+    cursor: pointer;
+    font-size: 2.5vw;
+    flex-wrap: wrap;
+}
+
+#suggestions img {
+    width: 4vw;
+    height: auto;
+    cursor: pointer;
+    margin-right: 1vw;
+}
+
+.suggestions-container {
+    display: flex;
+    flex-direction: column;
+    Justify-content: space-around;
+    align-items: center;
+    width: auto;
+    height: 50vh;
+}
+/* Barra de navegação superior */ 
+
+/* Elementos de navegação */
+.container {
+    height: 100vh;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    scroll-snap-align: start;
+}
+
+#section1 { 
+    background-color: #000000;
+}
+#section2 { 
+    background: url("../img/s2-back.jpg") no-repeat center/cover;
+    z-index: 100;
+    overflow-x: hidden;
+}
+
+#section2:before {
+    content: '';
+    position: absolute;    
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+#section3 { 
+    background: url('../img/sw-movies.jpg') no-repeat center/cover;
+}
+
+#section3:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.grid-section2 {
+    display: grid;
+    grid-template-areas: 
+    'header header header header header header'
+    'menu left left1 main main1 main2'
+    'footer footer1 footer2 footer3 footer4 footer5';
+    grid-column-gap: 5%;
+    grid-row-gap: 5%;
+/* Utilizar "calc(100% - valor)" para definir a largura ou altura de um contêiner dentro de outro */
+    width: calc(100% - 80px); 
+    height: calc(100% - 10px);
+    z-index: 5;
+    color: white;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    padding-top: 1vh;
+}
+
+.grid-section2 * {
+    z-index: 5;
+}
+
+.container-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.2vw;
+    width: 15vw;
+    height: 26.666666vh;
+    padding: 0;
+    box-shadow: inset 0 -5vh 5.5vw 2vh rgba(0, 0, 0, 1); 
+    border: 0;
+    background: no-repeat center/cover;
+    cursor: pointer;
+}
+
+.header-grid { 
+   grid-area: header;
+}
+
+.menu-grid { 
+   grid-area: menu;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   align-items: center;
+   background-color: #0E123A;
+   width: 15vw;
+   height: 26.666666vh;
+   border-radius: 20px;
+   color: white;
+   font-size: 1.2vw;
+}
+
+.left-grid {
+    grid-area: left;
+    background-image: url('../img/anakin-grid.jpg');
+}
+
+.left1-grid {
+    grid-area: left1;
+    background-image: url('../img/luke-grid.jpeg');
+}
+
+.main-grid {
+   grid-area: main;
+   background-image: url('../img/din-grid.jpeg');
+}
+
+.main1-grid {
+    grid-area: main1;
+    background-image: url('../img/ahsoka-grid.jpeg');
+}
+
+.footer-grid { 
+   grid-area: footer;
+   background-image: url('../img/clone-grid.jpeg');
+}
+
+.footer1-grid { 
+   grid-area: footer1;
+   background-image: url('../img/byavin-grid.jpg');
+}
+
+.footer2-grid {
+   grid-area: footer2;
+   background-image: url('../img/rebeliao-grid.jpeg');
+}
+
+.footer3-grid {
+    grid-area: footer3;
+    background-image: url('../img/1order-grid.jpeg');
+}
+
+.footer4-grid {
+    grid-area: footer4;
+    background-image: url('../img/oldr-grid.jpg');
+}
+
+.grid-title {
+    font-size: 4vw;
+}
+
+.grid-section3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    'header header1 header2'
+    'content content1 content2'
+    'footer footer1 footer2';
+    z-index: 5;
+    grid-row-gap: 0.4vh;
+    grid-column-gap: 0.3vw;
+    position: absolute;
+    left: 0.3vw;    
+    bottom: 0.4vh;
+    width: auto;
+    height: auto;
+}
+
+#title-grid-section3 {
+    width: 35vw;
+    height: calc(100vh - 84vh);
+    z-index: 5;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#title-grid2-section3 {
+    width: 35.95vw;
+    height: calc(100vh - 83.2vh);
+    z-index: 5;
+    position: absolute;
+    right: 0.3vw;
+    top: 0;
+    font-size: 4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.container-grid1 {
+    width: 11.5625vw;
+    height: 27.4074vh;
+    border: 3px solid #15fff5;    
+    background: no-repeat center/cover;
+    cursor: pointer;
+}
+
+.grid1-header {
+    grid-area: header;
+    background-image: url('../img/swi.jpg');
+}
+
+.grid-header1 {
+    grid-area: header1;
+    background-image: url('../img/swii.jpg');
+}
+
+.grid-header2 {
+    grid-area: header2;
+    background-image: url('../img/swiii.jpg');
+}
+
+.grid-content {
+    grid-area: content;
+    background-image: url('../img/swiv.jpeg');
+}
+
+.grid-content1 {
+    grid-area: content1;
+    background-image: url('../img/swv.png');
+}
+
+.grid-content2 {
+    grid-area: content2;
+    background-image: url('../img/swvi.jpg');
+}
+
+.grid-footer {
+    grid-area: footer;
+    background-image: url('../img/swvii.jpg');
+}
+
+.grid-footer1 {
+    grid-area: footer1;
+    background-image: url('../img/swviii.jpg');
+}
+
+.grid-footer2 {
+    grid-area: footer2;
+    background-image: url('../img/swix.jpg');
+}
+
+.grid2-section3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    'header header header'
+    'content content1 content2'
+    'footer footer1 footer2';
+    z-index: 5;
+    grid-row-gap: 0.3vh;
+    grid-column-gap: 0.4vw;
+    position: absolute;
+    right: 0.3vw;
+    bottom: 0.4vh;
+    width: auto;
+    height: auto;
+}
+
+.header-grid2 {
+    grid-area: header;
+    background: url('../img/tman2.jpeg') no-repeat center/cover;
+    border: 3px solid #15fff5;
+    width: 35.964vw;
+    cursor: pointer;
+}
+
+.content-grid2 {
+    grid-area: content;
+    background-image: url('../img/clone-wars.jpg');
+}
+
+.content1-grid2 {
+    grid-area: content1;
+    background-image: url('../img/fett.jpg');
+} 
+
+.content2-grid2 {
+    grid-area: content2;
+    background-image: url('../img/andor.webp');
+}
+
+.footer-grid2 {
+    grid-area: footer;
+    background-image: url('../img/obi-wan-serie.jpg');
+}
+
+.footer1-grid2 {
+    grid-area: footer1;
+    background-image: url('../img/ahsoka-serie.jpeg');
+}
+
+.footer2-grid2 {
+    grid-area: footer2;
+    background-image: url('../img/bad-batch-serie.jpg');
+} 
+/* Elementos de navegação */
+
+/* Elementos do menu rotativo */
+.slider {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    z-index: 1;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide img, .slide picture {
+    max-width: 100%;
+    min-height: 100%;
+}
+
+.slide {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;    
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 3vh;
+    z-index: 5;
+}
+
+.dot {
+    width: 5vw;
+    height: 1.5vh;
+    margin: 0 0.5vh;
+    background-color: #bbb;
+    border-radius: 1.5vh;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: #333;
+}
+/* Elementos do menu rotativo */
+
+/* Textos e títulos do menu rotativo */
+.carousel-container {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;    
+    align-items: flex-start;
+    position: absolute;
+    width: auto;
+    height: auto;
+    padding-left: 2vw;
+}
+
+.carousel-text {
+    font-family: Arial;
+    width: auto;
+    height: auto;
+    font-size: 1.8vw;
+    color: white;
+}
+
+.carousel-title {
+    display: flex;
+    width: 35vw;
+    height: auto;
+    margin-bottom: 3vh;
+    justify-content: flex-start;
+    font-size: 3vw;
+}
+
+#carousel-title2 {
+    color: #FFFD00;
+} 
+
+#carousel-title3 {
+    color: #ABABAC;
+}
+
+#carousel-title4 {
+    color: #5BBF51;
+}
+
+#carousel-title1 {
+    color: #FF7A7A;
+}
+
+#carousel-title5 {
+    color: #725636;
+}
+/* Textos e títulos do menu rotativo */
+
+/* Botões "Leia mais" */
+.read-more {
+    display: flex;
+    justify-content: center;
+    width: 12vw;
+    height: auto;
+    border: 3px solid white;
+    border-radius: 3vh;
+    cursor: pointer;
+    font-size: 2.5vw;
+    font-family: Arial;
+}
+
+.read-more.slide1 {
+    color: white;
+    margin-top: 3vh;
+}
+/* Botões "Leia mais" */
+
+/* Fontes */
+@font-face {
+       font-family: 'StarJediLogoDoubleline1';
+       src: url('fonts/stjldbl1-webfont.woff2') format('woff2'),
+         url('fonts/stjldbl1-webfont.woff') format('woff');
+       font-weight: normal;
+       font-style: normal;
+}
+
+@font-face {
+       font-family: 'StarJediLogoDoubleline2';
+       src: url('fonts/stjldbl2-webfont.woff2') format('woff2'),
+         url('fonts/stjldbl2-webfont.woff') format('woff');
+       font-weight: normal;
+       font-style: normal;
+}
+
+@font-face {
+       font-family: 'StarJediLogoMonoline';
+       src: url('fonts/strjmono-webfont.woff2') format('woff2' ),
+         url('fonts/strjmono-webfont.woff') format('woff');
+       font-weight: normal;
+       font-style: normal;
+}
+
+@font-face {
+       font-family: 'StarJediSpecialEdition';
+       src: url('fonts/stjedise-webfont.woff2') format('woff2'),
+         url('fonts/stjedise-webfont.woff') format('woff');
+       font-weight: normal;
+       font-style: normal;
+}
+
+@font-face {
+       font-family: 'StarJediOutline';
+       src: url('fonts/starjout-webfont.woff2') format('woff2'),
+         url('fonts/starjout-webfont.woff') format('woff');
+       font-weight: normal;
+       font-style: normal;
+}
+
+@font-face {
+       font-family: 'StarJediRegular';
+       src: url('fonts/starjedi-webfont.woff2') format('woff2'),
+         url('fonts/starjedi-webfont.woff') format('woff');
+       font-weight: normal;
+       font-style: normal;
+}
+
+@font-face {
+       font-family: 'StarJediHollow';
+       src: url('fonts/starjhol-webfont.woff2') format('woff2'),
+         url('fonts/starjhol-webfont.woff') format('woff');
+       font-weight: normal;
+       font-style: normal;
+} 
+
+.font1 {
+       font-family: 'StarJediLogoDoubleline1', sans-serif;
+}
+
+.font2 {
+       font-family: 'StarJediLogoDoubleline2', sans-serif;
+}
+
+.font3 {
+       font-family: 'StarJediLogoMonoline', sans-serif;
+}
+
+.font4 {
+       font-family: 'StarJediSpecialEdition', sans-serif;
+}
+
+.font5 {
+       font-family: 'StarJediOutline', sans-serif;
+}
+
+.font6 {
+       font-family: 'StarJediRegular', sans-serif;
+}
+
+.font7 {
+       font-family: 'StarJediHollow', sans-serif;
+} 
+/* Fontes */
+
+/* Elementos de responsividade */
+@media (max-width: 768px){
+.slides img {
+    width: 100vw;
+    height: 100vh;
+}
+
+}
+/* Elementos de responsividade */  
