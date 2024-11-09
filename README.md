@@ -1,1 +1,1 @@
-# Star-Wars---Site
+# Site idealizado como projeto acadêmico.
