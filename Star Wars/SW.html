@@ -8,7 +8,7 @@
 </head>
 <body class="fade-in">
 <div class="container fade-in" id="section1">
-<div class="slider">    
+<div class="slider">
     <div class="slides">
         <!-- Clone do último slide-->
         <div class="slide"><img src="img/empire.jpg"></div>
@@ -21,19 +21,19 @@
             <div class="carousel-container fade-in">
                 <span class="font4 carousel-title fade-in" id="carousel-title1">darth vader</span> 
                 <div class="carousel-text"><h3>Saiba como Anakin Skywalker deixou de ser um Cavaleiro Jedi e tornou-se o icônico Darth Vader.</h3></div>
-                <div class="read-more slide1 fade-in anakin-redirection">Leia mais</div> 
+                <div class="read-more slide1 fade-in" id="readmore1">Leia mais</div> 
             </div>                        
         </div>
        
         <div class="slide">
             <picture>
-                <source media="(max-width: 768px)" srcset="img/tman-m.jpg">
+                <source media="(max-width: 1000px)" srcset="img/tman-m.jpg">
                 <img src="img/tman.jpg"> 
             </picture>
             <div class="carousel-container">
                 <span class="font4 carousel-title" id="carousel-title2">the mandalorian</span>
-            <div class="carousel-text"><h3>Saiba tudo sobre a aclamada série do universo de Star Wars!</h3></div>
-            <div class="read-more slide1" onclick="readmore2()">Leia mais</div> 
+                <div class="carousel-text"><h3>Saiba tudo sobre a aclamada série do universo de Star Wars!</h3></div>
+                <div class="read-more slide1" id="readmore2">Leia mais</div> 
             </div>
         </div>
       
@@ -41,8 +41,8 @@
             <img src="img/dstar.jpg">
             <div class="carousel-container">
                 <span class="font4 carousel-title" id="carousel-title3">estrela da morte</span>
-            <div class="carousel-text"><h3>Conheça as massivas estações bélicas do Império.</h3></div>
-            <div class="read-more slide1" onclick="readmore1()">Leia mais</div> 
+                <div class="carousel-text"><h3>Conheça as massivas estações bélicas do Império.</h3></div>
+                <div class="read-more slide1" id="readmore3">Leia mais</div>
             </div>
         </div> 
         
@@ -50,8 +50,8 @@
             <img src="img/yoda.jpg">
             <div class="carousel-container">
                 <span class="font4 carousel-title" id="carousel-title4">mestre yoda</span>
-            <div class="carousel-text"><h3>Yoda foi um Grão-mestre Jedi, membro do Alto Conselho Jedi, durante a República.</h3></div>
-            <div class="read-more slide1" onclick="readmore1()">Leia mais</div> 
+                <div class="carousel-text"><h3>Yoda foi um Grão-mestre Jedi, membro do Alto Conselho Jedi, durante a República.</h3></div>
+                <div class="read-more slide1" id="readmore4">Leia mais</div>
             </div>
         </div>
      
@@ -60,7 +60,7 @@
             <div class="carousel-container">
                 <span class="font4 carousel-title" id="carousel-title5">império galático</span>
             <div class="carousel-text"><h3>Saiba todas as designações e <p>cargos do temido Império Galático.</p></h3></div>
-            <div class="read-more slide1">Leia mais</div> 
+            <div class="read-more slide1" id="readmore5">Leia mais</div> 
             </div>
         </div>
         
@@ -74,10 +74,10 @@
     <span class="dot" data-slide="3"></span>
     <span class="dot" data-slide="4"></span>
     <span class="dot" data-slide="5"></span>
-</div>   
+</div>     
         <div class="container-logo">
             <div class="swlogo fade-in font6"><p>star wars</p></div> 
-            <div id="search" class="fade-in"><img src="img/search.png"></div>
+            <div class="search fade-in" ><img src="img/search.png"></div>          
         </div>
         <div id="search-menu">
             <img src="img/close.svg" id="close-btn">
@@ -86,45 +86,54 @@
                 <div id="suggestions"></div> 
             </div>
         </div>
+        <img src="img/millennium.gif" id="gif-container">
     <div class="hr-bck">
       <a href="src/html/PS.html" class="sw-text font6 fade-in">história</a>
-      <a href="#section3" class="sw-text font6 fade-in">filmes</a>
-      <a href="src/html/PS.html" class="sw-text font6 fade-in">personagens</a>      
-      <a href="src/html/PS.html" class="sw-text font6 fade-in" id="last">jogos</a>
+      <a href="#section3" class="sw-text font6 fade-in">filmes</a>   
+      <a href="#section4" class="sw-text font6 fade-in">jogos</a>
+      <a href="" class="sw-text font6 fade-in" id="last">sobre</a>     
     </div>
+    
+    <div class="container-logo-phone">
+    <div class="div-container-logo">
+        <div class="search display-none" ><img src="img/search.png"></div>
+    </div>
+    <div class="div-container-logo1"></div>
+    <div class="div-container-logo"></div>
+</div>      
        
 </div>
-    <div class="container fade-in" id="section2">
-        <div class="grid-section2 fade-in">
+    <div class="container fade-in any-section" id="section2">
+        <div class="grid-section2-4 fade-in">
             <div class="header-grid"><span class="font6 grid-title">tópicos relevantes</span></div>
             <div class="menu-grid">
                 <p class="font4"><a href="src/html/PS.html">império</a></p><hr class="hr1">
-                <p class="font4"><a href="src/html/PS.html">República</a></p><hr class="hr1">
+                <p class="font4"><a href="src/html/PS.html">república</a></p><hr class="hr1">
                 <p class="font4"><a href="src/html/PS.html">Separatistas</a></p><hr class="hr1">
                 <p class="font4"><a href="src/html/PS.html">ordem jedi</a></p>
             </div>
-            <div class="left-grid container-grid anakin-redirection">
+            <div class="left-grid container-grid" id="left-grid">
                 <p class="font2">anakin skywalker</p>          
             </div>
-            <div class="left1-grid container-grid">
+            <div class="left1-grid container-grid" id="left1-grid">
                 <p class="font2">luke skywalker</p>
             </div>
-            <div class="main-grid container-grid">
+            <div class="main-grid container-grid" id="main-grid">
                 <p class="font2">din djarin</p>
             </div>
             <div class="main1-grid container-grid">
                 <p class="font2">ahsoka tano</p>
             </div>
-            <div class="footer-grid container-grid">
+            <div class="footer-grid container-grid" id="footer-grid">
                 <p class="font4">guerras clônicas</p>
             </div>
-            <div class="footer1-grid container-grid">
+            <div class="footer1-grid container-grid" id="footer1-grid">
                 <p class="font4">batalha de yavin</p>
             </div>
-            <div class="footer2-grid container-grid">
+            <div class="footer2-grid container-grid" id="footer2-grid">
                 <p class="font4">aliança rebelde</p>
             </div>
-            <div class="footer3-grid container-grid">
+            <div class="footer3-grid container-grid" id="footer3-grid">
                 <p class="font4">primeira ordem</p>
             </div>
             <div class="footer4-grid container-grid">
@@ -132,7 +141,7 @@
             </div>
         </div>
     </div>
-    <div class="container fade-in" id="section3">
+    <div class="container fade-in any-section" id="section3">
         <div id="title-grid-section3"><p class="font4">filmes</p></div>
         <div class="grid-section3 fade-in">
             <div class="grid1-header container-grid1"></div>
@@ -154,6 +163,17 @@
             <div class="footer-grid2 container-grid1"></div> 
             <div class="footer1-grid2 container-grid1"></div> 
             <div class="footer2-grid2 container-grid1"></div> 
+        </div>
+    </div>
+    <div class="container fade-in any-section" id="section4">
+        <div class="grid-section2-4">
+            <div class="header-grid"><span class="font6 grid-title">principais jogos</span></div>
+            <div class="left-grid container-grid" id="left-grid2"></div>
+            <div class="footer-grid container-grid" id="footer-grid2"></div>
+            <div class="footer1-grid container-grid" id="footer1-grid2"></div>
+            <div class="left1-grid container-grid" id="left1-grid2"></div>
+            <div class="footer2-grid container-grid" id="footer2-grid2"></div>
+            <div class="container-grid" id="menu-grid"></div>
         </div>
     </div>
     <script src="src/SW.js"></script>
