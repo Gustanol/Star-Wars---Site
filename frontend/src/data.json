@@ -1,0 +1,148 @@
+{
+  "sections": [
+    {"id": "section3",
+     "title": "Filmes",
+     "type": "internal",
+     "image": "img/sw1.jpeg"},
+
+    {"id": "title-grid-section3",
+     "title": "Séries",
+     "type": "internal", 
+     "image": "img/sw1.jpeg"},
+
+    {"id": "section4",
+     "title": "Jogos",
+     "type": "internal",
+     "image": "img/sw-game.jpg"},
+
+    {"url": "src/html/anakin.html", 
+     "title": "Anakin Skywalker",
+     "type": "external", 
+     "image": "img/anakin-grid.jpg"},
+
+    {"url": "src/html/anakin.html", 
+     "title": "Darth Vader",
+     "type": "external", 
+     "image": "img/dv1.jpg"},
+
+    {"url": "src/html/luke.html", 
+     "title": "Luke Skywalker",
+     "type": "external", 
+     "image": "img/luke-grid.jpeg"},
+
+    {"url": "src/html/obi.html", 
+     "title": "Obi-Wan Kenobi",
+     "type": "external", 
+     "image": "img/obi-wan.jpg"},
+
+    {"url": "src/html/palpatine.html", 
+     "title": "Palpatine",
+     "type": "external", 
+     "image": "img/palpatine.jpg"},
+
+    {"url": "src/html/palpatine.html", 
+     "title": "Darth Sidious",
+     "type": "external", 
+     "image": "img/palpatine.jpg"},
+
+    {"url": "src/html/maul.html", 
+     "title": "Darth Maul",
+     "type": "external", 
+     "image": "img/maul.jpg"},
+
+    {"url": "src/html/chewbacca.html", 
+     "title": "Chewbacca",
+     "type": "external", 
+     "image": "img/chewbacca.jpg"},
+
+    {"url": "src/html/bb8.html", 
+     "title": "BB-8",
+     "type": "external", 
+     "image": "img/bb8.jpg"},
+
+    {"url": "src/html/boba.html", 
+     "title": "Boba Fett",
+     "type": "external", 
+     "image": "img/boba.jpg"},
+
+    {"url": "src/html/r2d2.html", 
+     "title": "R2-D2",
+     "type": "external", 
+     "image": "img/r2d2.jpg"},
+
+    {"url": "src/html/c3po.html", 
+     "title": "C-3PO",
+     "type": "external", 
+     "image": "img/c3po.jpg"},
+
+    {"url": "src/html/clone.html", 
+     "title": "Clones",
+     "type": "external", 
+     "image": "img/clone.jpg"},
+
+    {"url": "src/html/grievous.html", 
+     "title": "General Grievous",
+     "type": "external", 
+     "image": "img/grievous.jpg"},
+
+    {"url": "src/html/ewok.html", 
+     "title": "Ewoks",
+     "type": "external", 
+     "image": "img/ewok.jpg"},
+
+    {"url": "src/html/han.html", 
+     "title": "Han Solo",
+     "type": "external", 
+     "image": "img/han.jpg"},
+
+    {"url": "src/html/ig11.html", 
+     "title": "IG-11",
+     "type": "external", 
+     "image": "img/ig11.jpg"},
+
+    {"url": "src/html/empire.html", 
+     "title": "Império Galático",
+     "type": "external", 
+     "image": "img/empire-logo.jpg"},
+
+    {"url": "src/html/kylo.html", 
+     "title": "Kylo Ren",
+     "type": "external", 
+     "image": "img/kylo.jpg"},
+
+    {"url": "src/html/lando.html", 
+     "title": "Lando Calrissian",
+     "type": "external", 
+     "image": "img/lando.jpg"},
+
+    {"url": "src/html/leia.html", 
+     "title": "Leia Organa",
+     "type": "external", 
+     "image": "img/leia.jpg"},
+
+    {"url": "src/html/rey.html", 
+     "title": "Rey",
+     "type": "external", 
+     "image": "img/rey.jpg"},
+
+    {"url": "src/html/stormtrooper.html", 
+     "title": "Stormtroopers",
+     "type": "external", 
+     "image": "img/stormtrooper.jpg"},
+
+    {"url": "src/html/thrawn.html", 
+     "title": "Thrawn",
+     "type": "external", 
+     "image": "img/thrawn.jpg"},
+
+    {"url": "src/html/yoda.html", 
+     "title": "Yoda",
+     "type": "external", 
+     "image": "img/yoda2.jpg"},
+
+     {"url": "src/html/ahsoka.html", 
+     "title": "Ahsoka Tano",
+     "type": "external", 
+     "image": "img/ahsoka.jpg"}
+  ]
+}
