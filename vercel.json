@@ -1,5 +1,5 @@
 {
   "redirects": [
-    { "source": "/", "destination": "/SW.html", "permanent": true }
+    { "source": "/", "destination": "frontend/SW.html", "permanent": true }
   ]
 }
