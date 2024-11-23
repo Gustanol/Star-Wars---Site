@@ -1,0 +1,5 @@
+{
+  "redirects": [
+    { "source": "/", "destination": "/SW.html", "permanent": true }
+  ]
+}
