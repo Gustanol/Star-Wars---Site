@@ -208,6 +208,14 @@ img {
 .hr-bck a {
     text-decoration: none;
 }
+.account-div {
+    width: 3vw;
+    height: 5vh;
+    border: 0.1vw solid white;
+    border-radius: 50%;
+    background: url('../img/account.svg') no-repeat center/contain;
+    cursor: pointer;
+}
 .sw-text {
     flex-shrink: 1;
     cursor: pointer;    
@@ -307,7 +315,7 @@ img {
     background-color: black;
     z-index: 100;
     justify-content: center;
-    aalign-items: center;
+    align-items: center;
 }
 #gif-container img {
     width: auto;

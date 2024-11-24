@@ -310,4 +310,14 @@ document.addEventListener("DOMContentLoaded", function () {
             console.error(error.message);
         }
     });
+    // Eventos de pesquisa
+    // Eventos de login
+    const nodeAPI = 'https://star-wars-site.onrender.com';
+
+    document.querySelectorAll('.account-div').forEach((account1) => {
+       account1.addEventListener('click', () => {
+           window.location.href='src/html/login.html';
+       });
+    });
+// Eventos de login 
 });
