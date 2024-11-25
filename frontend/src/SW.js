@@ -312,7 +312,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     // Eventos de pesquisa
     // Eventos de login
-    const API_URL = 'https://star-wars-site.onrender.com';
+    const API_URL = 'https://api.render.com/deploy/srv-ct1sa3lsvqrc73e3eomg?key=VuIXalQSgzc';
 
     document.querySelectorAll('.account-div').forEach((account1) => {
        account1.addEventListener('click', () => {
