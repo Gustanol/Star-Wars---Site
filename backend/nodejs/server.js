@@ -1,9 +1,13 @@
 import express from 'express';
 import mongoose from 'mongoose';
-import User from './models/User.js';
+import User from 'models/User.js';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import bodyParser from 'body-parser';
+import cors from 'cors';
+import dotenv from 'dotenv';
+
+dotenv.config(); 
 
 const app = express();
 const PORT = 3000;
@@ -40,7 +44,7 @@ app.post('/login', async (req, res) => {
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) return res.status(400).send('Senha incorreta.');
 
-    const token = jwt.sign({ id: user._id }, 'secrect_key', { expiresIn: '1h' });
+    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
     res.status(200).json({ token });
   } catch (err) {
     res.status(500).send('Erro no login.');
