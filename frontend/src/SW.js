@@ -311,53 +311,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
     // Eventos de pesquisa
-    // Eventos de login
-    const API_URL = 'https://star-wars-site.onrender.com';
-
     document.querySelectorAll('.account-div').forEach((account1) => {
        account1.addEventListener('click', () => {
            window.location.href='src/html/login.html';
        });
     });
-
-// Registrar usuário
-document.getElementById('registerForm').addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const formData = new FormData(e.target);
-  const data = Object.fromEntries(formData.entries());
-
-  try {
-    const response = await fetch(`${API_URL}/signup`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data),
-    });
-
-    const result = await response.text();
-    alert(result);
-  } catch (error) {
-    console.error('Erro:', error);
-  }
-});
-
-// Login do usuário
-document.getElementById('loginForm').addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const formData = new FormData(e.target);
-  const data = Object.fromEntries(formData.entries());
-
-  try {
-    const response = await fetch(`${API_URL}/login`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data),
-    });
-
-    const result = await response.text();
-    alert(result);
-  } catch (error) {
-    console.error('Erro:', error);
-  }
-});
-// Eventos de login 
 });
