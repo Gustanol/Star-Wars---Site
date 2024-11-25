@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
+    <title>Mestre Yoda</title>
     <link rel="stylesheet" href="../SW.css">
 </head>
 <body>
@@ -13,8 +13,7 @@
             color: white;
             font-family: 'Arial';
             display: flex;
-            overflow-y: scroll;
-            overflow-x: hidden;
+            overflow: hidden;
             padding: 0;
             background: url('../../img/dv3.jpg') no-repeat center/cover;
         }
@@ -138,11 +137,10 @@
          <div class="swlogo page font6"><p>star wars</p></div>
     </div>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const form1 = document.getElementById('loginForm');
-            const form2 = document.getElementById('registerForm');
-            const part1 = document.querySelector('.class2');
-            const class2T = document.getElementById('class2T');
+        const form1 = document.getElementById('loginForm');
+const form2 = document.getElementById('registerForm');
+const part1 = document.querySelector('.class2');
+const class2T = document.getElementById('class2T');
         document.getElementById('register').addEventListener('click', () => {
             part1.classList.add('animation-toLeft');
             setTimeout(() => {
@@ -163,8 +161,48 @@
             form1.style.display = 'flex';
             class2T.innerHTML='Login'; 
         });
-      });
+        
+        const API_URL = 'https://star-wars-site.onrender.com';
+        
+        // Registrar usuário
+document.getElementById('registerForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const formData = new FormData(e.target);
+  const data = Object.fromEntries(formData.entries());
+
+  try {
+    const response = await fetch(`${API_URL}/signup`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+
+    const result = await response.text();
+    alert(result);
+  } catch (error) {
+    console.error('Erro:', error);
+  }
+});
+
+// Login do usuário
+document.getElementById('loginForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const formData = new FormData(e.target);
+  const data = Object.fromEntries(formData.entries());
+
+  try {
+    const response = await fetch(`${API_URL}/login`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+
+    const result = await response.text();
+    alert(result);
+  } catch (error) {
+    console.error('Erro:', error);
+  }
+});
     </script>
-    <script src="../SW.js"></script>
 </body>
 </html>
