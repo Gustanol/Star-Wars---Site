@@ -5,9 +5,8 @@ const User = require('./models/User');
 const cors = require('cors');
 
 const app = express();
-
-const app = express();
 const PORT = process.env.PORT || 3000;
+app.use(cors());
 
 app.get('/', (req, res) => {
   res.send('Servidor está funcionando!');
