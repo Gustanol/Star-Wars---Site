@@ -1,12 +1,11 @@
-import express from 'express';
-import mongoose from 'mongoose';
-import path from 'path';
-import User from path.resolve(__dirname, 'models', 'User');
-import bcrypt from 'bcryptjs';
-import jwt from 'jsonwebtoken';
-import bodyParser from 'body-parser';
-import cors from 'cors';
-import dotenv from 'dotenv';
+const express = require('express');
+const mongoose = require('mongoose');
+const User = require('models/User');
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const dotenv = require('dotenv');
 
 dotenv.config(); 
 
