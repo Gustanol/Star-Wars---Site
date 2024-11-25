@@ -1,13 +1,9 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const User = require('models/User');
-const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
-const bodyParser = require('body-parser');
+const User = require('./models/User');
+const bcrypt = require('bcrypt');
 const cors = require('cors');
-const dotenv = require('dotenv');
-
-dotenv.config(); 
+const bodyParser = require('body-parser');
 
 const app = express();
 const PORT = 3000;
@@ -16,16 +12,17 @@ mongoose.connect('mongodb+srv://gualeixos456:Dk3A8PfDnK6dCAIr@gustavo.no5ff.mong
   .then(() => console.log('MongoDB conectado!'))
   .catch(err => console.error(err));
 
-// Middleware
+// Middlewares
 app.use(cors());
 app.use(bodyParser.json());
 
-// Rota de Registro
+// Rota para registro
 app.post('/register', async (req, res) => {
   const { username, password } = req.body;
 
   try {
-    const user = new User({ username, password });
+    const hashedPassword = await bcrypt.hash(password, 10);
+    const user = new User({ username, password: hashedPassword });
     await user.save();
     res.status(201).send('Usuário registrado com sucesso!');
   } catch (err) {
@@ -33,7 +30,7 @@ app.post('/register', async (req, res) => {
   }
 });
 
-// Rota de Login
+// Rota para login
 app.post('/login', async (req, res) => {
   const { username, password } = req.body;
 
@@ -44,10 +41,9 @@ app.post('/login', async (req, res) => {
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) return res.status(400).send('Senha incorreta.');
 
-    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
-    res.status(200).json({ token });
+    res.status(200).send('Login bem-sucedido!');
   } catch (err) {
-    res.status(500).send('Erro no login.');
+    res.status(500).send('Erro no servidor.');
   }
 });
 
