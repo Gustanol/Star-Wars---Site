@@ -1,6 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
-import User from 'models/User.js';
+import path from 'path';
+import User from path.resolve(__dirname, 'models', 'User');
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import bodyParser from 'body-parser';
