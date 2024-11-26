@@ -381,7 +381,7 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
   const result = await response.json();
 
   if (response.ok) {
-    alert(result.username);
+    alert(result.message);
     console.log('Nome do usuário:', result.username);
   } else {
     alert(result.message);
