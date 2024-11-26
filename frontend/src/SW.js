@@ -372,15 +372,21 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
   const data = Object.fromEntries(formData.entries());
 
   try {
-    const response = await fetch(`${API_URL}/login`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data),
-    });
+  const response = await fetch(`${API_URL}/login`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data),
+  });
 
-    const result = await response.text();
-    alert(result);
-  } catch (error) {
-    console.error('Erro:', error);
+  const result = await response.json();
+
+  if (response.ok) {
+    alert(result.message);
+    console.log('Nome do usuário:', result.username);
+  } else {
+    alert(result.message);
   }
+} catch (error) {
+  console.error('Erro na requisição:', error);
+}
 });
