@@ -36,10 +36,16 @@ app.post('/signup', async (req, res) => {
 app.post('/login', async (req, res) => {
   const { username, password } = req.body;
   const user = await User.findOne({ username });
+  
   if (user && await user.comparePassword(password)) {
-    res.status(200).send('Login bem-sucedido');
+    res.status(200).json({
+      message: 'Login bem-sucedido',
+      username: user.username
+    });
   } else {
-    res.status(401).send('Credenciais inválidas');
+    res.status(401).json({
+      message: 'Credenciais inválidas'
+    });
   }
 });
 
