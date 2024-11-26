@@ -54,6 +54,29 @@ img {
     0% {transform: translateX(3vw);opacity: 0;}
     100% {transform: translateX(0);opacity: 1;}
 }
+@keyframes toRight {
+    0% {transform: translateX(0);}
+    100% {transform: translateX(50vw);}
+}
+@keyframes toLeft {
+    0% {transform: translateX(0);}
+    100% {transform: translateX(-50vw);}
+}
+.animation-toRight {
+    animation: toRight 0.6s ease-in 1 forwards;
+}
+.animation-toLeft {
+    animation: toLeft 0.6s ease-in 1 forwards;
+}
+ #registerForm {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+#loginForm h1, #registerForm h1 {
+    font-size: 3vw;
+} 
 /* Transições e animações */
 /* Páginas de conteúdo */
 .div-content {
@@ -157,6 +180,69 @@ img {
     z-index: 10;
     text-decoration: none;
 }
+.class1 {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+    border-radius: 2vw;
+}
+.class1 form {
+    width: 46%;
+    height: 85%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-left: 2vw;
+}
+.class1 form input {
+    width: 70%;
+    height: 10%;
+    background-color: #d6d6d6;
+    padding: 1vw;
+    font-size: 1.5vw;
+    border-radius: 2vw;
+}
+.class1 form button {
+    width: 15%;
+    height: 8%;
+    border-radius: 5vw;
+    font-size: 1.5vw;
+} 
+.class1 form h3 {
+    font-size: 1.5vw;
+}
+.class1 h3 span {
+    cursor: pointer;
+}
+.class2 {
+    width: 54%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    border-radius: 5%;
+    background: url('../img/dstar2.jpg') no-repeat center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.class2 p {
+    z-index: 10;
+    font-size: 5vw;
+}
+.class2:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 5%;
+} 
 /* Páginas de conteúdo */
 /* Barra de navegação superior */ 
 .swlogo {
