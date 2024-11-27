@@ -317,35 +317,10 @@ document.addEventListener("DOMContentLoaded", function () {
        });
     });
 });
-
-const form1 = document.getElementById('loginForm');
-const form2 = document.getElementById('registerForm');
-const part1 = document.querySelector('.class2');
-const class2T = document.getElementById('class2T');
-        document.getElementById('register').addEventListener('click', () => {
-            part1.classList.add('animation-toLeft');
-            setTimeout(() => {
-                form1.style.display = 'none';
-                part1.classList.remove('animation-toLeft');
-                part1.style.right = '50vw';                
-            }, 700);
-            form2.style.display = 'flex';
-            class2T.innerHTML='Registro';
-        });
-        document.getElementById('login').addEventListener('click', () => {
-            part1.classList.add('animation-toRight');
-            setTimeout(() => {
-                form2.style.display = 'none';
-                part1.classList.remove('animation-toRight');
-                part1.style.right = '0';
-            }, 700);
-            form1.style.display = 'flex';
-            class2T.innerHTML='Login'; 
-        });
         
-        const API_URL = 'https://star-wars-site.onrender.com';
+const API_URL = 'https://star-wars-site.onrender.com';
         
-        // Registrar usuário
+// Registrar usuário
 document.getElementById('registerForm').addEventListener('submit', async (e) => {
   e.preventDefault();
   const formData = new FormData(e.target);
