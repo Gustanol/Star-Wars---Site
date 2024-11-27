@@ -6,6 +6,13 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true,
     unique: true,
+    validate: {
+      validator: function (value) {
+        // Validação de e-mail
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+      },
+      message: props => `${props.value} não é um e-mail válido!`
+    }
   },
   password: {
     type: String,
