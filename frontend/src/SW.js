@@ -318,12 +318,17 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     
     const userInfo = document.querySelectorAll('.info-user');
-  
     const username = localStorage.getItem('username');
   
     if (username) {
       userInfo.forEach((element) => {
-        element.innerHTML = `Você está logado como: ${username} `;
+        element.innerHTML = `Você está logado como: ${username}`;
       });
+      document.querySelectorAll('.account-div').forEach((account1) => {
+       account1.addEventListener('click', () => {
+           localStorage.clear();
+           window.location.href = 'SW.html';
+       });
+    });
     }
 });
