@@ -104,6 +104,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const searchinput = document.getElementById('search-input');
     const closebutton = document.getElementById('search-menu');
     const style = window.getComputedStyle(closebutton);
+    const Add = document.querySelectorAll('.add');
+    const addMenu = document.getElementById('add-menu');
     var gifContainer = document.getElementById('gif-container');
     var MenuHam = document.querySelectorAll('.hidden-menu-ham');
     var containerLogo = document.querySelector('.container-logo-phone');
@@ -163,7 +165,8 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".search").forEach((searchBtn) => {
         searchBtn.addEventListener("click", () => {
             if (style.display === 'none') {
-            closebutton.style.display = 'flex';                       
+            closebutton.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
             searchinput.focus();
             if (window.innerWidth <= 768) {
                 containerLogo.style.display = 'none';
@@ -192,17 +195,6 @@ document.addEventListener("DOMContentLoaded", function () {
             searchinput.value = '';
             suggestions2.innerHTML = '';
             if (window.innerWidth <= 768){
-                containerLogo.style.display = 'flex';
-            }
-        }
-    });
-
-    document.addEventListener('scroll', function() {
-        if (style.display === 'flex') {
-            closebutton.style.display = 'none';
-            searchinput.value = '';
-            suggestions2.innerHTML = '';
-            if (window.innerWidth <= 768) {
                 containerLogo.style.display = 'flex';
             }
         }
@@ -322,13 +314,25 @@ document.addEventListener("DOMContentLoaded", function () {
   
     if (username) {
       userInfo.forEach((element) => {
-        element.innerHTML = `Você está logado como: ${username}`;
+        element.innerHTML = username;
       });
       document.querySelectorAll('.account-div').forEach((account1) => {
        account1.addEventListener('click', () => {
            localStorage.clear();
            window.location.href = 'SW.html';
        });
+    });
+    
+    Add.forEach((add) => {
+        add.style.display='block';
+        add.addEventListener('click', () => {
+            addMenu.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        });
+    });
+    
+    document.getElementById('add-close').addEventListener('click', () => {
+        addMenu.style.display = 'none';
     });
     }
 });

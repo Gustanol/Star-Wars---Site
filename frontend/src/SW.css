@@ -302,6 +302,12 @@ img {
     background: url('../img/account.svg') no-repeat center/contain;
     cursor: pointer;
 }
+.info-user {
+    width: auto;
+    height: auto;
+    margin-right: 1vw;
+    font-family: 'Arial';
+}
 .sw-text {
     flex-shrink: 1;
     cursor: pointer;    
@@ -324,6 +330,35 @@ img {
     height: auto;
     cursor: pointer;
     z-index: 10;
+}
+.add {
+    width: 3vw;
+    height: auto;
+    cursor: pointer;
+    z-index: 10;
+    display: none;
+}
+#add-menu {
+    display: none;
+    position: absolute;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 10;
+    top: 0;
+    left: 0;
+    padding: 1vh;
+    animation: fade-in-out 0.7s ease-in-out 1 forwards;
+}
+#add-close {
+    width: 3vw;
+    height: auto;
+    top: 2vh;
+    position: absolute;
+    left: 5vw;
+    cursor: pointer;
 }
 #close-btn {
     width: 3vw;
