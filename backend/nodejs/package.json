@@ -13,7 +13,10 @@
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.3",
     "cors": "^2.8.5",
+    "ejs": "^3.1.10",
     "express": "^4.21.1",
-    "mongoose": "^8.8.2"
+    "fs": "^0.0.1-security",
+    "mongoose": "^8.8.2",
+    "path": "^0.12.7"
   }
 }
