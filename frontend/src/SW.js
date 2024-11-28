@@ -183,6 +183,7 @@ document.addEventListener("DOMContentLoaded", function () {
             closebutton.style.display = 'none';
             searchinput.value = '';
             suggestions2.innerHTML = '';
+            document.body.style.overflow = 'scroll';
             if (window.innerWidth <= 768) {
                 containerLogo.style.display = 'flex';
             }
@@ -194,6 +195,7 @@ document.addEventListener("DOMContentLoaded", function () {
             closebutton.style.display = 'none';
             searchinput.value = '';
             suggestions2.innerHTML = '';
+            document.body.style.overflow = 'scroll';
             if (window.innerWidth <= 768){
                 containerLogo.style.display = 'flex';
             }
@@ -333,6 +335,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
     document.getElementById('add-close').addEventListener('click', () => {
         addMenu.style.display = 'none';
+        document.body.style.overflow = 'scroll';
     });
     }
 });
