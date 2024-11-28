@@ -24,11 +24,15 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
 app.post('/signup', async (req, res) => {
   const { username, password } = req.body;
   try {
+    const existUsername = await User.findOne({ username });
+    if (existUsername) {
+      res.status(400).send('Erro: O usuário já existe');
+    }
     const user = new User({ username, password });
     await user.save();
     res.status(201).send('Usuário criado com sucesso');
   } catch (err) {
-    res.status(400).send('Erro ao criar usuário');
+    res.status(500).send('Erro ao criar usuário');
   }
 });
 
