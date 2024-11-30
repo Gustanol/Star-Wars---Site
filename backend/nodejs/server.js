@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const User = require('./models/User');
 const cors = require('cors');
-const axios = require('axios');
+const https = require('https');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -58,15 +58,14 @@ app.get('/api/ping', (req, res) => {
     res.status(200).send('Servidor ativo');
 });
 
-// Intervalo para fazer requisições ao próprio servidor
-setInterval(async () => {
-    try {
-        const response = await axios.get(`https://star-wars-site.onrender.com:${PORT}/api/ping`);
-        console.log('Resposta do servidor:', response.status);
-    } catch (error) {
-        console.error('Erro na requisição:', error.message);
-    }
-}, 300000); // A cada 5 minutos
+// Requisição interna
+setInterval(() => {
+    https.get(`https://star-wars-site.onrender.com:${PORT}/api/ping`, (res) => {
+        console.log(`Ping enviado ao servidor - Status: ${res.statusCode}`);
+    }).on('error', (err) => {
+        console.error(`Erro ao fazer ping: ${err.message}`);
+    });
+}, 300000); // 1000 ms = 1s
 
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
