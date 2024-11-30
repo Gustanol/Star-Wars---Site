@@ -65,7 +65,7 @@ setInterval(() => {
     }).on('error', (err) => {
         console.error(`Erro ao fazer ping: ${err.message}`);
     });
-}, 180000); // 1000ms = 1s
+}, 300000); // 1000ms = 1s
 
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
