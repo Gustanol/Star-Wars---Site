@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const User = require('./models/User');
 const cors = require('cors');
+const http = require('http');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -52,6 +53,19 @@ app.post('/login', async (req, res) => {
     });
   }
 });
+
+app.get('/api/ping', (req, res) => {
+    res.status(200).send('Servidor ativo');
+});
+
+// Requisição interna
+setInterval(() => {
+    http.get(`https://star-wars-site.onrender.com:${PORT}/api/ping`, (res) => {
+        console.log(`Ping enviado ao servidor - Status: ${res.statusCode}`);
+    }).on('error', (err) => {
+        console.error(`Erro ao fazer ping: ${err.message}`);
+    });
+}, 300000); // A cada 5 minutos
 
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
