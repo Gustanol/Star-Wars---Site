@@ -60,7 +60,7 @@ app.get('/api/ping', (req, res) => {
 
 // Requisição interna
 setInterval(() => {
-    https.get(`https://star-wars-site.onrender.com:${PORT}/api/ping`, (res) => {
+    https.get(`https://star-wars-site.onrender.com/api/ping`, (res) => {
         console.log(`Ping enviado ao servidor - Status: ${res.statusCode}`);
     }).on('error', (err) => {
         console.error(`Erro ao fazer ping: ${err.message}`);
