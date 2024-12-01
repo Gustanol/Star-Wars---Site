@@ -318,9 +318,11 @@ document.addEventListener("DOMContentLoaded", function () {
       userInfo.forEach((element) => {
         element.innerHTML = username;
       });
+      
+      document.querySelector('.searchContainer span').innerHTML = username;
       document.querySelectorAll('.account-div').forEach((account1) => {
        account1.addEventListener('click', () => {
-           localStorage.clear();
+           localStorage.removeItem('username');
            window.location.href = 'SW.html';
        });
     });
