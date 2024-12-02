@@ -338,7 +338,7 @@ input:focus {
     z-index: 10;
 }
 .add {
-    width: 10vw;
+    width: 3vw;
     height: auto;
     cursor: pointer;
     z-index: 10;
@@ -365,6 +365,47 @@ input:focus {
     position: absolute;
     left: 5vw;
     cursor: pointer;
+}
+.chooseContainer {
+    width: 80%;
+    height: 60%;
+    border: 4px solid red;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.choiceContainer {
+    width: 100%;
+    height: 70%;
+    border: 4px solid red;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.chooseContainer p {
+    font-size: 2.5vw;
+    margin-bottom: 6vh;
+}
+.imageChoice {
+    width: calc((100%)*0.25);
+    height: 100%;
+    border: 4px solid blue;
+    background: no-repeat center/cover;
+    box-shadow: inset 0 -5vh 5.5vw 2vh rgba(0, 0, 0, 1);
+}
+#orgChoice {
+    background-image: url('../img/oldr-grid.jpg');
+}
+#caChoice {
+    background-image: url('../img/anakin-grid.jpg');
+}
+#drChoice {
+    background-image: url('../img/r2d2.jpg');
+}
+#peChoice {
+    background-image: url('../img/clone-grid.jpeg');
 }
 #close-btn {
     width: 3vw;
