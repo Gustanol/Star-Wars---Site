@@ -47,7 +47,16 @@ input:focus {
     0% {transform: scale(1);}
     100% {transform: scale(1.1);}
 }
-
+@keyframes scale2 {
+    0% {transform: scale(1.1);}
+    100% {transform: scale(1);}
+}
+.animationScale1 {
+    animation: scale1 0.5s ease-in-out 1 forwards;
+}
+.animationScale2 {
+    animation: scale2 0.5s ease-in-out 1 forwards;
+}
 @keyframes fade-in-out {
     0% {opacity: 0;}
     80% {opacity: 0.8;}    
@@ -268,7 +277,6 @@ input:focus {
     color: yellow;
     transition: color 0.5s ease-in-out;
     -webkit-text-stroke: 0.05vw white;
-    animation: scale1 0.7s ease 1 forwards;
 }
 .container-logo {
     width: auto;
@@ -324,9 +332,6 @@ input:focus {
 }
 .sw-text::after {
     content: " •\00a0";
-}
-.sw-text:hover, .container-grid:hover, .container-grid1:hover, .header-grid2:hover, .read-more:hover {
-    animation: scale1 0.5s ease-in-out 1 forwards;
 }
 #last::after {
     content: "";
