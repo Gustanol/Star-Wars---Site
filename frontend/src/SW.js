@@ -161,6 +161,17 @@ document.addEventListener("DOMContentLoaded", function () {
            }
        });       
    }); 
+
+document.querySelectorAll('.swlogo, .sw-text, .container-grid, .container-grid1, .header-grid2, .read-more').forEach((animationFade) => {
+       animationFade.addEventListener('mouseenter', () => {
+           animationFade.classList.remove('animationScale2');
+           animationFade.classList.add('animationScale1');
+       });
+       animationFade.addEventListener('mouseleave', () => {
+           animationFade.classList.remove('animationScale1');
+           animationFade.classList.add('animationScale2');
+       });
+   });
     
     document.querySelectorAll(".search").forEach((searchBtn) => {
         searchBtn.addEventListener("click", () => {
