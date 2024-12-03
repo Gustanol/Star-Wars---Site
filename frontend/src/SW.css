@@ -89,6 +89,9 @@ input:focus {
 #loginForm h1, #registerForm h1 {
     font-size: 3vw;
 }
+#loginForm button, #registerForm button {
+    width: 70.5%;
+}
 /* Transições e animações */
 /* Páginas de conteúdo */
 .div-content {
@@ -321,6 +324,9 @@ input:focus {
     height: auto;
     margin-right: 1vw;
     font-family: 'Arial';
+}
+.info-user p {
+    cursor: pointer;
 }
 .sw-text {
     flex-shrink: 1;
