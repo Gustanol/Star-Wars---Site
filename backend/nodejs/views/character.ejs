@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="../SW.css">
+</head>
+<body class="body-content" id="body-content<%= id %>">
+    <style>
+        #body-content<%= id %>:before{background-image:url('../../img/content<%= id %>-back.jpg');}
+        #id-header<%= id %>{background-image:url('../../img/anakin-header.jpg');border-bottom: 0.5vh solid red;}
+        #grid-div-content<%= id %>{box-shadow: 0 0 1.5vw 0.4vw #ff4040;}
+    </style>
+    <div class="div-content fade-in">    
+        <div class="hr-bck fade-in"><a href="" class="font6"><%= title %></a></div>
+        <div class="container-logo">
+            <div class="swlogo page fade-in font6"><p>star wars</p></div>
+        </div>
+        <div class="grid-div-content" id="grid-div-content<%= id %>"> 
+            <div class="header-grid-div-content" id="id-header<%= id %>"></div>
+            <div class="container-grid-div-content content1-grid-div-content">
+                <p>Planeta natal: <%= planet %></p>
+                <p>Nascimento: <%= birthday %></p>
+                <p>Morte: <%= death %></p>
+            </div>
+            <div class="container-grid-div-content content2-grid-div-content">
+                <p>Espécie: <%= species %></p>
+                <p>Gênero: <%= gender %></p>
+                <p>Altura: <%= height %> cm</p>
+                <p>Massa: <%= mass %> kg</p>
+            </div>
+            <div class="container-grid-div-content content3-grid-div-content">
+                <p>Afiliações:</p>
+            </div>
+        </div>
+        <div class="main-text-html">
+            <div class="text-html">
+                 <p><%= content %></p>
+            </div>
+            <div class="reference-html-pages">
+                <p><%= quote %></p>
+                <span><%= quoter %></span> 
+            </div>
+        </div>
+    </div>
+    <div class="div-content fade-in">
+        
+    </div>
+    <script src="../SW.js"></script>
+</body>
+</html>
