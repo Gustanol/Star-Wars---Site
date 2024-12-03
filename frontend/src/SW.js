@@ -337,18 +337,5 @@ document.querySelectorAll('.swlogo, .sw-text, .container-grid, .container-grid1,
            window.location.href = 'SW.html';
        });
     });
-    
-    Add.forEach((add) => {
-        add.style.display='block';
-        add.addEventListener('click', () => {
-            addMenu.style.display = 'flex';
-            document.body.style.overflow = 'hidden';
-        });
-    });
-    
-    document.getElementById('add-close').addEventListener('click', () => {
-        addMenu.style.display = 'none';
-        document.body.style.overflow = 'scroll';
-    });
     }
 });
