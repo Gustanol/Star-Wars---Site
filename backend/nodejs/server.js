@@ -109,7 +109,7 @@ app.post('/org', async (req, res) => {
 });
 });
 
-const repoPath = 'https://github.com/Gustanol/Star-Wars---Site';
+const repoPath = 'https://github.com/Gustanol/Star-Wars---Site/blob/main';
 
 exec(
   `
