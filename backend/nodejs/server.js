@@ -7,6 +7,7 @@ const https = require('https');
 const ejs = require('ejs');
 const fs = require('fs');
 const path = require('path');
+const { exec } = require('child_process');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -108,6 +109,24 @@ app.post('/org', async (req, res) => {
 });
 });
 
+const repoPath = 'https://github.com/Gustanol/Star-Wars---Site';
+
+exec(
+  `
+  cd ${repoPath} &&
+  git add frontend/src/html/* &&
+  git commit -m "Adicionando arquivos HTML" &&
+  git push
+  `,
+  (err, stdout, stderr) => {
+    if (err) {
+      console.error(`Erro: ${stderr}`);
+      return;
+    }
+    console.log('Arquivos enviados ao GitHub com sucesso!');
+  }
+);
+  
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
 });
