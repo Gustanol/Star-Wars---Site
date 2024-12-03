@@ -4,6 +4,9 @@ const bodyParser = require('body-parser');
 const User = require('./models/User');
 const cors = require('cors');
 const https = require('https');
+const ejs = require('ejs');
+const fs = require('fs');
+const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -66,6 +69,44 @@ setInterval(() => {
         console.error(`Erro ao fazer ping: ${err.message}`);
     });
 }, 300000); // 1000 ms = 1s
+
+// Diretório de salvamento dos arquivos HTML
+const outputDir = path.join(__dirname, 'generated');
+
+// Certificando que ele existe
+if (!fs.existsSync(outputDir)) {
+  fs.mkdirSync(outputDir, { recursive: true });
+}
+
+const pages = [];
+
+app.post('/org', async (req, res) => {
+  const { title, orgType, chief, capital, coin, followers } = req.body;
+  // Criar um objeto com os dados recebidos
+  const newPage = {
+    title,
+    orgType,
+    chief,
+    capital,
+    coin,
+    followers
+  };
+  // Adicionar o objeto à lista
+  pages.push(newPage);
+
+  pages.forEach((page, index) => {
+  ejs.renderFile(path.join(__dirname, 'views', 'org.ejs'), page, (err, html) => {
+    if (err) {
+      console.error(`Erro ao renderizar página ${index + 1}:`, err);
+      return;
+    }
+
+    const filePath = path.join(outputDir, `page${index + 1}.html`);
+    fs.writeFileSync(filePath, html);
+    console.log(`Página salva em: ${filePath}`);
+  });
+});
+});
 
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
