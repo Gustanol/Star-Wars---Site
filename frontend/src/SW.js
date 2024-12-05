@@ -20,9 +20,15 @@ document.addEventListener("DOMContentLoaded", function () {
             window.location.href="../../SW.html";
         });
     });
-  document.querySelectorAll(".div-container-logo1").forEach((sw1) => {
+  document.querySelectorAll(".div-container-logo1.page").forEach((sw1) => {
         sw1.addEventListener("click", () => {
             window.location.href="SW.html";
+        });
+    });
+    
+    document.querySelectorAll(".div-container-logo1.pages").forEach((sw1) => {
+        sw1.addEventListener("click", () => {
+            window.location.href="../../SW.html";
         });
     });
 
@@ -104,10 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const searchinput = document.getElementById('search-input');
     const closebutton = document.getElementById('search-menu');
     const style = window.getComputedStyle(closebutton);
-    const Add = document.querySelectorAll('.add');
-    const addMenu = document.getElementById('add-menu');
     var gifContainer = document.getElementById('gif-container');
-    var MenuHam = document.querySelectorAll('.hidden-menu-ham');
     var containerLogo = document.querySelector('.container-logo-phone');
     
    document.querySelectorAll('.readmore1').forEach((readBtn1) => {
@@ -212,25 +215,6 @@ document.querySelectorAll('.swlogo, .sw-text, .container-grid, .container-grid1,
             }
         }
     });
-    
-    document.querySelectorAll('.menu-ham').forEach((menuham) => {
-        menuham.addEventListener('click', () => {
-            MenuHam.forEach((menuHam) => {
-                menuHam.style.display = 'flex';
-                document.body.style.overflow = 'hidden';
-                document.body.classList.add('added');
-                document.querySelectorAll('.closeBtn').forEach((CloseBtn) => {
-                    CloseBtn.style.display = 'block';
-                    CloseBtn.addEventListener('click', () => {
-                        menuHam.style.display = 'none';
-                        document.body.classList.remove('added');
-                        document.body.style.overflow = 'scroll';
-                        CloseBtn.style.display = 'none';
-                    })
-                })
-            });
-        });
-    });
 
     function fetchSections() {
         return new Promise((resolve, reject) => {
@@ -316,11 +300,6 @@ document.querySelectorAll('.swlogo, .sw-text, .container-grid, .container-grid1,
         }
     });
     // Eventos de pesquisa
-    document.querySelectorAll('.account-div').forEach((account1) => {
-       account1.addEventListener('click', () => {
-           window.location.href='src/html/login.html';
-       });
-    });
     
     const userInfo = document.querySelectorAll('.info-user');
     const username = localStorage.getItem('username');
@@ -329,12 +308,16 @@ document.querySelectorAll('.swlogo, .sw-text, .container-grid, .container-grid1,
       userInfo.forEach((element) => {
         element.innerHTML = username;
       });
-      
-      document.querySelector('.searchContainer span').innerHTML = username;
       document.querySelectorAll('.account-div').forEach((account1) => {
        account1.addEventListener('click', () => {
-           localStorage.removeItem('username');
+           localStorage.clear();
            window.location.href = 'SW.html';
+       });
+    });
+    } else {
+        document.querySelectorAll('.account-div').forEach((account1) => {
+       account1.addEventListener('click', () => {
+           window.location.href='src/html/login.html';
        });
     });
     }

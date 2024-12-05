@@ -920,21 +920,10 @@ input:focus {
 }
 body {
     display: flex;
-    flex-flow: column nowrap;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
     overflow-x: hidden;
     background-color: #0c0c0c;
-}
-body.added::after {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 45;
-    background-color: rgba(0,0,0,0.8);
 }
 .fade-in {
     opacity: 1;
@@ -1002,7 +991,7 @@ body.added::after {
     height: 75vh;
     width: auto;
     position: absolute;
-    top: 7vh;
+    top: 2vh;
 }
 .slide {
     max-height: 30vh;
@@ -1095,49 +1084,38 @@ body.added::after {
     width: 31vw;
     border: none;
 }
-.hidden-menu-ham {
-    width: 60%;
-    min-height: 100vh;
-    position: fixed;
-    right: 0;
-    top: 0;
-    background-color: #282828;
-    z-index: 50;
-    display: none;
-    animation: translateMenu 0.5s ease-in-out 1 forwards;
-}
-.closeBtn {
-    width: 6vw;
-    height: 3vh;
-    position: fixed;
-    top: 1vh;
-    left: 1vh;
-    background: url('../img/close.svg') no-repeat center/contain;
-    z-index: 200;
-    display: none;
-}
-.searchContainer {
-    width: 100%;
-    height: 7%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-flow: row wrap;    
-    justify-content: flex-start;
-    padding: 1vh;
-}
 .account-div {
     width: 7vw;
-    height: auto;
+    height: 3vh;
+    background: url('../img/account.svg') no-repeat center/contain;
 }
-.searchContainer span {
-    width: calc(100% - 7vw);
-    height: 100%;
-    padding-left: 1.5vh;
+.info-user {
+    width: 100vw;
+    height: auto;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: center;
+    margin-top: 2vh;
+}
+.grid-div-content {
+    width: 95vw;
+    height: 40vh;
+    position: absolute;
+    top: 5vh;
+}
+.main-text-html {
+    width: 95vw;
+    height: 40vh;
+    position: absolute;
+    top: 50vh;
+}
+.text-html {
+    justify-content: space-around;
+}
+.grid-div-content p, .grid-div-content span, .grid-div-content li, .reference-html-pages p, .reference-html-pages span {
+    font-size: 1.5vh;
+}
+.text-html p {
+    font-size: 2.3vh;
 }
 }
 /* Elementos de responsividade */  
