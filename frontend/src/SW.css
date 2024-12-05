@@ -640,7 +640,7 @@ input:focus {
 .container-grid1 {
     width: 11.5625vw;
     height: 27.4074vh;
-    background: no-repeat center/cover;
+    background: no-repeat center/contain;
     cursor: pointer;
 }
 .grid1-header {
@@ -699,7 +699,6 @@ input:focus {
 .header-grid2 {
     grid-area: header;
     background: url('../img/tman2.jpeg') no-repeat center/cover;
-    border: 3px solid #15fff5;
     width: 35.964vw;
     cursor: pointer;
 }
