@@ -125,6 +125,19 @@ document.addEventListener("DOMContentLoaded", function () {
        }
        });
    });
+   
+   document.querySelectorAll('.readmore2').forEach((readBtn2) => {
+       readBtn2.addEventListener('click', () => {
+       if (window.innerWidth > 768) {
+           gifContainer.style.display = 'flex';
+        setTimeout(() => {
+            window.location.href = 'src/html/din.html';
+        }, 1500);
+       } else {
+           window.location.href = 'src/html/din.html';
+       }
+       });
+   });
     
    document.querySelectorAll('.readmore3').forEach((readBtn3) => {
        readBtn3.addEventListener('click', () => {
@@ -163,7 +176,59 @@ document.addEventListener("DOMContentLoaded", function () {
                window.location.href = 'src/html/empire.html';
            }
        });       
-   }); 
+   });
+   
+   document.querySelectorAll('.luke1').forEach((lukeBtn1) => {
+       lukeBtn1.addEventListener('click', () => {
+       if (window.innerWidth > 768) {
+           gifContainer.style.display = 'flex';
+        setTimeout(() => {
+            window.location.href = 'src/html/luke.html';
+        }, 1500);
+       } else {
+           window.location.href = 'src/html/luke.html';
+       }
+       });
+   });
+   
+   document.querySelectorAll('.ahsoka1').forEach((ahsokaBtn1) => {
+       ahsokaBtn1.addEventListener('click', () => {
+       if (window.innerWidth > 768) {
+           gifContainer.style.display = 'flex';
+        setTimeout(() => {
+            window.location.href = 'src/html/ahsoka.html';
+        }, 1500);
+       } else {
+           window.location.href = 'src/html/ahsoka.html';
+       }
+       });
+   });
+   
+   document.querySelectorAll('.clone1').forEach((cloneBtn1) => {
+       cloneBtn1.addEventListener('click', () => {
+       if (window.innerWidth > 768) {
+           gifContainer.style.display = 'flex';
+        setTimeout(() => {
+            window.location.href = 'src/html/clone.html';
+        }, 1500);
+       } else {
+           window.location.href = 'src/html/clone.html';
+       }
+       });
+   });
+   
+   document.querySelectorAll('.yavin1').forEach((yavinBtn1) => {
+       yavinBtn1.addEventListener('click', () => {
+       if (window.innerWidth > 768) {
+           gifContainer.style.display = 'flex';
+        setTimeout(() => {
+            window.location.href = 'src/html/yavin.html';
+        }, 1500);
+       } else {
+           window.location.href = 'src/html/yavin.html';
+       }
+       });
+   });
 
 document.querySelectorAll('.swlogo, .sw-text, .container-grid, .container-grid1, .header-grid2, .read-more').forEach((animationFade) => {
        animationFade.addEventListener('mouseenter', () => {
