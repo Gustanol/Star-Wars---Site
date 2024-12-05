@@ -640,8 +640,7 @@ input:focus {
 .container-grid1 {
     width: 11.5625vw;
     height: 27.4074vh;
-    border: 3px solid #15fff5;    
-    background: no-repeat center/contain;
+    background: no-repeat center/cover;
     cursor: pointer;
 }
 .grid1-header {
