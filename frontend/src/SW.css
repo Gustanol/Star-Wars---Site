@@ -1112,10 +1112,10 @@ body {
     justify-content: space-around;
 }
 .grid-div-content p, .grid-div-content span, .grid-div-content li, .reference-html-pages p, .reference-html-pages span {
-    font-size: 1.5vh;
+    font-size: 1vh;
 }
 .text-html p {
-    font-size: 2.3vh;
+    font-size: 2vh;
 }
 }
 /* Elementos de responsividade */  
