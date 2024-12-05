@@ -107,7 +107,7 @@ input:focus {
 .body-content {
     animation: fade-in-out 3.5s ease-in-out 1 forwards;
 }
-.body-content:before {
+.body-content::before {
     content: '';
     position: fixed;
     background: no-repeat center/cover;
