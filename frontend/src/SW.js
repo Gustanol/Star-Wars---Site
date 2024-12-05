@@ -316,7 +316,7 @@ document.querySelectorAll('.swlogo, .sw-text, .container-grid, .container-grid1,
         if (input.length === 0) return;
 
         const filteredSections = sections.filter(section =>
-            section.title.toLowerCase().includes(input.toLowerCase())
+            section.title.toLowerCase().startsWith(input.toLowerCase())
         );
 
         filteredSections.forEach(section => {
