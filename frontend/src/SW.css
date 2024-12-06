@@ -934,16 +934,8 @@ body {
     z-index: 0;
     background: url('');
 }
-#section4, .container-logo, .carousel-container, .grid2-section3, #title-grid2-section3 {
+#section4, .container-logo, .carousel-container, .grid2-section3, #title-grid2-section3, .hr-bck {
     display: none;
-}
-.hr-bck {
-    width: 100%;
-    height: auto;
-    justify-content: center;
-}
-.hr-bck a {
-    font-size: 2vh;
 }
 .container-logo-phone {
     width: 100%;
