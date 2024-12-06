@@ -25,6 +25,11 @@
      "type": "external", 
      "image": "img/dv1.jpg"},
 
+    {"url": "src/html/anakin.html", 
+     "title": "Vader",
+     "type": "external", 
+     "image": "img/dv1.jpg"},
+
     {"url": "src/html/luke.html", 
      "title": "Luke Skywalker",
      "type": "external", 
@@ -50,6 +55,11 @@
      "type": "external", 
      "image": "img/maul.jpg"},
 
+    {"url": "src/html/din.html", 
+     "title": "Din Djarin",
+     "type": "external", 
+     "image": "img/din-grid.jpeg"},
+
     {"url": "src/html/chewbacca.html", 
      "title": "Chewbacca",
      "type": "external", 
@@ -62,6 +72,11 @@
 
     {"url": "src/html/boba.html", 
      "title": "Boba Fett",
+     "type": "external", 
+     "image": "img/boba.jpg"},
+
+    {"url": "src/html/boba.html", 
+     "title": "Fett",
      "type": "external", 
      "image": "img/boba.jpg"},
 
