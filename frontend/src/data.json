@@ -24,6 +24,96 @@
      "title": "Darth Vader",
      "type": "external", 
      "image": "img/dv1.jpg"},
+     
+    {"url": "src/html/swi.html", 
+     "title": "Star Wars - Episódio I: A Ameaça Fantasma",
+     "type": "external", 
+     "image": "img/swi1.png"},
+     
+    {"url": "src/html/swi.html", 
+     "title": "A Ameaça Fantasma",
+     "type": "external", 
+     "image": "img/swi1.png"},
+     
+    {"url": "src/html/swii.html", 
+     "title": "Star Wars - Episódio II: Ataque dos Clones",
+     "type": "external", 
+     "image": "img/swii1.png"},
+     
+    {"url": "src/html/swii.html", 
+     "title": "Ataque dos Clones",
+     "type": "external", 
+     "image": "img/swii1.png"},
+     
+    {"url": "src/html/swiii.html", 
+     "title": "Star Wars - Episódio III: A Vingança dos Sith",
+     "type": "external", 
+     "image": "img/swiii1.png"},
+     
+    {"url": "src/html/swiii.html", 
+     "title": "A Vingança dos Sith",
+     "type": "external", 
+     "image": "img/swiii1.png"},
+     
+    {"url": "src/html/swiv.html", 
+     "title": "Star Wars - Episódio IV: Uma Nova Esperança",
+     "type": "external", 
+     "image": "img/swiv1.png"},
+     
+    {"url": "src/html/swiv.html", 
+     "title": "Uma Nova Esperança",
+     "type": "external", 
+     "image": "img/swiv1.png"},
+     
+    {"url": "src/html/swv.html", 
+     "title": "Star Wars - Episódio V: O Império Contra-Ataca",
+     "type": "external", 
+     "image": "img/swv1.png"},
+     
+    {"url": "src/html/swv.html", 
+     "title": "O Império Contra-Ataca",
+     "type": "external", 
+     "image": "img/swv1.png"},
+     
+    {"url": "src/html/swvi.html", 
+     "title": "Star Wars - Episódio VI: O Retorno de Jedi",
+     "type": "external", 
+     "image": "img/swvi1.png"},
+     
+    {"url": "src/html/swvi.html", 
+     "title": "O Retorno de Jedi",
+     "type": "external", 
+     "image": "img/swvi1.png"},
+     
+    {"url": "src/html/swvii.html", 
+     "title": "Star Wars - Episódio VII: O Despertar da Força",
+     "type": "external", 
+     "image": "img/swvii1.png"},
+     
+    {"url": "src/html/swvii.html", 
+     "title": "O Despertar da Força",
+     "type": "external", 
+     "image": "img/swvii1.png"},
+     
+    {"url": "src/html/swviii.html", 
+     "title": "Star Wars - Episódio VIII: Os Últimos Jedi",
+     "type": "external", 
+     "image": "img/swviii1.png"},
+     
+    {"url": "src/html/swviii.html", 
+     "title": "Os Últimos Jedi",
+     "type": "external", 
+     "image": "img/swviii1.png"},
+     
+    {"url": "src/html/swvix.html", 
+     "title": "Star Wars - Episódio IX: A Ascensão Skywalker",
+     "type": "external", 
+     "image": "img/swix1.png"},
+     
+    {"url": "src/html/swvix.html", 
+     "title": "A Ascensão Skywalker",
+     "type": "external", 
+     "image": "img/swix1.png"},
 
     {"url": "src/html/anakin.html", 
      "title": "Vader",
