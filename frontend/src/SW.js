@@ -229,6 +229,19 @@ document.addEventListener("DOMContentLoaded", function () {
        }
        });
    });
+   
+   document.querySelectorAll('.rebel1').forEach((rebelBtn1) => {
+       rebelBtn1.addEventListener('click', () => {
+       if (window.innerWidth > 768) {
+           gifContainer.style.display = 'flex';
+        setTimeout(() => {
+            window.location.href = 'src/html/rebel.html';
+        }, 1500);
+       } else {
+           window.location.href = 'src/html/rebel.html';
+       }
+       });
+   });
 
 document.querySelectorAll('.swlogo, .sw-text, .container-grid, .container-grid1, .header-grid2, .read-more').forEach((animationFade) => {
        animationFade.addEventListener('mouseenter', () => {
