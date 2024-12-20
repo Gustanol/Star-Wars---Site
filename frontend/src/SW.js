@@ -399,4 +399,8 @@ document.querySelectorAll('.swlogo, .sw-text, .container-grid, .container-grid1,
        });
     });
     }
+
+  if (window.location.pathname.endsWith('/')) {
+    window.history.replaceState({}, '', window.location.pathname + 'SW.html');
+}
 });
